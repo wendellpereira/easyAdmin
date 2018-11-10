@@ -30,6 +30,13 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Easyplanner Admin');
+    expect(compiled.querySelector('h2').textContent).toContain('Easyplanner Admin');
+  });
+
+  it('should render the easyplanner logo', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('img').imageURL).toContain('../assets/logo-easy-cor.png');
   });
 });
