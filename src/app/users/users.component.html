@@ -1,16 +1,10 @@
-<h3>Usuários</h3>
+<h3>{{ title }}</h3>
 <ul class="Users">
   <li *ngFor="let user of users"
       (click)="onSelect(user)"
       [class.selected]="user === selectedUser">
-    <span class="badge"> {{ user.id}} </span> {{ user.name }} E-mail: {{user.email}} Empresa: {{user.company}}
+    <span class="badge"> {{ user.id}} </span> {{ user.name }} E-mail: {{user.email}}
   </li>
 </ul>
 
-<div *ngIf="selectedUser">
-  <h4> {{ selectedUser.name | uppercase }} Detalhe </h4>
-  <div><span> id: </span> {{ selectedUser.id }} </div>
-  <div>
-    <p> Eventos: #34 </p>
-  </div>
-</div>
+<app-events [user]="selectedUser"></app-events>

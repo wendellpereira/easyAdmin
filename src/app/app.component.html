@@ -1,10 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <img id="app-logo" width="500" alt="Easyplanner Logo" src="../assets/logo-easy-cor.png">
   <h2>
-     {{ title }}
+    <!-- TODO: create a 500px image logo -->
+    <img id="app-logo" width="500" alt="Easyplanner Logo" src="../assets/easyplanner.png">
+    <span>{{ title }}</span>
   </h2>
-  <app-users></app-users>
 </div>
 
+<nav>
+  <a routerLink="/">Home</a>
+
+  <a routerLink="/users">Users</a>
+</nav>
+
 <router-outlet></router-outlet>
+
+<app-messages></app-messages>

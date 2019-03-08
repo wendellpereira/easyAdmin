@@ -1,4 +1,4 @@
-import { AppPage } from './app.po';
+import {AppPage} from './app.po';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -6,9 +6,9 @@ describe('workspace-project App', () => {
   beforeEach(() => {
     page = new AppPage();
   });
-
-  it('should display welcome message', () => {
+  
+  it('should display the title Admin', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to easyAdmin!');
+    expect(page.getParagraphText()).toEqual('Admin');
   });
 });
