@@ -9,7 +9,7 @@ import {UserService} from '../user.service';
 })
 export class DashboardComponent implements OnInit {
   users: User[] = [];
-  
+
   constructor(private userService: UserService) {
   }
   
@@ -19,6 +19,6 @@ export class DashboardComponent implements OnInit {
   
   getusers(): void {
     this.userService.getUsers()
-      .subscribe(users => this.users = users.slice(1, 5));
+      .subscribe(users => this.users = users.slice(0, 4));
   }
 }

@@ -10,12 +10,18 @@ import {MessageService} from './message.service';
   providedIn: 'root'
 })
 export class UserService {
-  
+
   constructor(private messageService: MessageService) {
   }
   
   getUsers(): Observable<User[]> {
     this.messageService.add('UserService: fetched users.');
     return of(USERS);
+  }
+  
+  getUser(id: number): Observable<User> {
+    // TODO: send the mesage _after_fetching the hero
+    this.messageService.add(`UserService: fetched user id=${id}`);
+    return of(USERS.find(user => user.id === id));
   }
 }

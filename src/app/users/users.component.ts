@@ -9,17 +9,13 @@ import {UserService} from '../user.service';
 })
 
 export class UsersComponent implements OnInit {
-  
   title: 'Usuários';
-  
+  users: User[];
+
+  // constructor(private userService: UserService) { }
   constructor(private usersService: UserService) {
   }
 
-  users: User[];
-  selectedUser: User;
-  
-  // constructor(private userService: UserService) { }
-  
   // ngOnInit lifecycle hook that happens after constructs the component
   ngOnInit() {
     this.getUsers();
@@ -29,9 +25,4 @@ export class UsersComponent implements OnInit {
     this.usersService.getUsers()
       .subscribe(users => this.users = users);
   }
-
-  onSelect(user: User): void {
-    this.selectedUser = user;
-  }
-
 }

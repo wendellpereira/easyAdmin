@@ -17,7 +17,7 @@ export const USERS: User[] = [
         budget: 'R$15.000'
       },
       {
-        name: 'Aniversário da Bruna',
+        name: 'Aniversário da Jussara',
         guests: '200',
         tasks: '34',
         vendors: '20',
@@ -69,7 +69,7 @@ export const USERS: User[] = [
         budget: 'R$15.000'
       },
       {
-        name: 'Aniversário da Bruna',
+        name: 'Aniversário da Joaninha',
         guests: '200',
         tasks: '34',
         vendors: '20',

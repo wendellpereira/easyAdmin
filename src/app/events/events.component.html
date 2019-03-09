@@ -2,7 +2,6 @@
   <h4> Detalhes: </h4>
   <div><span> Empresa: </span> {{ user.company }}</div>
 
-
   <div *ngFor="let event of user.events" class="event">
     <p>Nome: <span>{{ event.name }}</span></p>
     <p>Convidados: <span>{{ event.guests }}</span></p>
@@ -12,5 +11,7 @@
     <p>Docs: <span>{{ event.docs }}</span></p>
     <p>Orçamento: <span>R${{ event.budget }}</span></p>
   </div>
+
+  <button (click)="goBack()">Voltar</button>
 
 </div>

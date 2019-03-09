@@ -1,10 +1,10 @@
 <h3>{{ title }}</h3>
-<ul class="Users">
-  <li *ngFor="let user of users"
-      (click)="onSelect(user)"
-      [class.selected]="user === selectedUser">
-    <span class="badge"> {{ user.id}} </span> {{ user.name }} E-mail: {{user.email}}
+<ul class="users">
+  <li *ngFor="let user of users">
+    <a routerLink="/events/{{ user.id }}">
+      <span class="badge"> {{ user.id}} </span> Nome: {{ user.name }} E-mail: {{ user.email }}
+    </a>
   </li>
 </ul>
 
-<app-events [user]="selectedUser"></app-events>
+<app-events></app-events>
