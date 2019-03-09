@@ -8,13 +8,15 @@ import {UsersComponent} from './users/users.component';
 import {EventsComponent} from './events/events.component';
 import {InterceptorModule} from './interceptor.module';
 import {MessagesComponent} from './messages/messages.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     EventsComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,15 @@
   <h4> Detalhes: </h4>
   <div><span> Empresa: </span> {{ user.company }}</div>
 
-  <div>
-    <p> Eventos: #34 </p>
+
+  <div *ngFor="let event of user.events" class="event">
+    <p>Nome: <span>{{ event.name }}</span></p>
+    <p>Convidados: <span>{{ event.guests }}</span></p>
+    <p>Tarefas: <span>{{ event.tasks }}</span></p>
+    <p>Fornecedores: <span>{{ event.vendors }}</span></p>
+    <p>Roteiros: <span>{{ event.scripts }}</span></p>
+    <p>Docs: <span>{{ event.docs }}</span></p>
+    <p>Orçamento: <span>R${{ event.budget }}</span></p>
   </div>
+
 </div>

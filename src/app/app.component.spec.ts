@@ -2,6 +2,7 @@ import {async, TestBed} from '@angular/core/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {AppComponent} from './app.component';
 import {MessagesComponent} from './messages/messages.component';
+import {EventsComponent} from './events/events.component';
 import {UsersComponent} from './users/users.component';
 
 describe('AppComponent', () => {
@@ -13,7 +14,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         MessagesComponent,
-  
+        EventsComponent,
         UsersComponent
       ],
     }).compileComponents();

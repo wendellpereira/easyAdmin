@@ -2,8 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {User} from '../user';
 import {UserService} from '../user.service';
 
-// import { USERS } from 'service/mock-users';
-
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
